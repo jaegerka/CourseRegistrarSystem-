@@ -1,0 +1,38 @@
+<div class="header">
+    <h1>Student List</h1>
+    <p>Here is a list of all students.</p>
+    <button mat-raised-button (click)="addStudent()">Add Student</button>
+</div>
+
+<div>
+    <table mat-table [dataSource]="studentList" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef> First Name </th>
+          <td mat-cell *matCellDef="let student"> {{student.first_name}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef> Last Name </th>
+          <td mat-cell *matCellDef="let student"> {{student.last_name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="userName">
+            <th mat-header-cell *matHeaderCellDef> Username</th>
+            <td mat-cell *matCellDef="let student"> {{student.username}} </td>
+          </ng-container>
+      
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let student"> 
+                <button mat-raised-button style="margin-right: 1%;" color="warn" (click)="deleteStudent(student)">Delete</button>
+                <button mat-raised-button color="primary">Edit</button>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+
+      </table>
+</div>

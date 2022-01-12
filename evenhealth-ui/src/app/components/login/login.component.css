@@ -1,0 +1,23 @@
+mat-card {
+    margin: auto;
+    text-align: center;
+    width: 60%;
+}
+
+mat-card-header {
+    margin: auto;
+    text-align: center;
+}
+
+mat-card-actions {
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    margin-top: 5%;
+}
+
+input {
+    position: block;
+}

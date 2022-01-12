@@ -1,0 +1,19 @@
+<div class="header">
+    <h1>Login</h1>
+    <p>Please insert your data below to login. </p>
+</div>
+
+<mat-card class="example-card">
+    <mat-card-content>
+      Username <br>
+      <input matInput #username>
+        <br><br>
+      Password <br>
+      <input matInput #password type="password"> 
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="login(username.value, password.value)">Login</button>
+        <br> <br>
+      Forgot your password?  Click <a>here</a> to reset.
+    </mat-card-actions>
+</mat-card>

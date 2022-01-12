@@ -1,0 +1,11 @@
+<h1>Welcome, {{user}}</h1>
+
+<app-course-list [user]="user" *ngIf="user == 'Student' || user == 'Admin'"></app-course-list>
+
+<app-enrolled-courses *ngIf="user == 'Student'"></app-enrolled-courses>
+<app-students-list *ngIf="user == 'Admin'"></app-students-list>
+<app-professor-courses *ngIf="user == 'Professor'"></app-professor-courses>
+
+<div class="button-wrapper">
+    <button mat-raised-button (click)="logout()" color="primary">Logout</button>
+</div>  

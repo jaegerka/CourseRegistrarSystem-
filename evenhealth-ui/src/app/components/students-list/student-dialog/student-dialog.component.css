@@ -1,0 +1,10 @@
+.header {
+    text-align: center;
+}
+
+.input {
+    display: block;
+    width: 40%;
+    text-align: left;
+    margin: auto;
+}
