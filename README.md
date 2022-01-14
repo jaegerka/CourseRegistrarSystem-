@@ -37,6 +37,13 @@ To login as a professor, please use:
 - username: student01
 - password: password 
 
+**To run tests in the Java application**
+- Navigate to src/test/java > com/evenhealth/demo
+- Right click on TestRunner.java
+- Click "Run as" > "Java Application"
+- For each test, it will return true if it passed or false if it failed*
+*Tests are written in the files within the folder (ex. CourseServiceTest.java)
+
 **Thing I would've liked to have implemented**
 - Security
 - Validation for user login 
