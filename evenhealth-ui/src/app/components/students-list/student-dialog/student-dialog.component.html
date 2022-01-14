@@ -6,19 +6,18 @@
 <form class="student-form">
     <mat-form-field class="input" appearance="fill">
       <mat-label>Username</mat-label>
-      <input matInput [ngModel]="username">
+      <input matInput #username>
     </mat-form-field>
     <mat-form-field class="input" appearance="fill">
         <mat-label>First Name</mat-label>
-        <input matInput [ngModel]="firstName">
+        <input matInput #firstName>
     </mat-form-field>
     <mat-form-field class="input" appearance="fill">
         <mat-label>Last Name</mat-label>
-        <input matInput [ngModel]="lastName">
+        <input matInput #lastName>
     </mat-form-field>
 
     <div mat-dialog-actions>
-        <button mat-button (click)="submit(username, firstName, lastName)">Submit</button>
-        <button mat-button (click)="submit(username, firstName, lastName)">Test</button>
+        <button mat-button (click)="submit(username.value, firstName.value, lastName.value)">Submit</button>
     </div>
 </form>

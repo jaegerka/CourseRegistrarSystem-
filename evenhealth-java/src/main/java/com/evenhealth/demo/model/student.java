@@ -2,6 +2,8 @@ package com.evenhealth.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,7 +14,8 @@ public class student extends user {
 	
 	@Column
 	@Id
-	private int id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	public int student_id;
 	
 	@Column
 	private String first_name;
@@ -24,11 +27,11 @@ public class student extends user {
 	private String username;
 
 	public int getId() {
-		return id;
+		return student_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.student_id = id;
 	}
 
 	public String getFirst_name() {

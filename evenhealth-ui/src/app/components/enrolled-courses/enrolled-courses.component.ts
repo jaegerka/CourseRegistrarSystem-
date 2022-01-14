@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnrolledCoursesComponent implements OnInit {
 
+  displayedColumns: string[] = ['description', 'professor', 'capacity', 'actions'];
+
   constructor() { }
 
   ngOnInit(): void {

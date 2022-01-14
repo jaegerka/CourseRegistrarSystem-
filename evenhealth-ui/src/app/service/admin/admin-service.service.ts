@@ -32,4 +32,8 @@ export class AdminServiceService {
     return this.http.post<Student>('http://localhost:8080/students/create', student)
   }
 
+  deleteStudent(student_id: Number) {
+    return this.http.put(`http://localhost:8080/students/delete/${student_id}`, {observe: 'response'})
+  }
+
 }

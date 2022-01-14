@@ -3,7 +3,9 @@ package com.evenhealth.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,10 +21,18 @@ public class StudentController {
 	private StudentService ss;
 	
 	@PostMapping("/create")
-	public student createStudent(@RequestBody student newStudent) {
+	public void createStudent(@RequestBody student newStudent) {
 		System.out.println("Create Student Endpoint Hit");
-		System.out.println(newStudent);
-		return ss.createNewStudent(newStudent);
+		System.out.println(newStudent.getFirst_name());
+		ss.createNewStudent(newStudent);
+	}
+	
+	@PutMapping("/delete/100")
+	public void deleteStudent(
+//			@PathVariable(value = "id") int id
+			) {
+		System.out.println("Delete Student Endpoint Hit");
+		ss.deleteStudent(100);
 	}
 
 }

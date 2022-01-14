@@ -3,7 +3,7 @@ package com.evenhealth.demo.model;
 public class user {
 
 	private int id;
-	private String name;
+//	private String name;
 	private String username;
 	
 	public int getId() {
@@ -12,12 +12,12 @@ public class user {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public String getName() {
+//		return name;
+//	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 	public String getUsername() {
 		return username;
 	}

@@ -21,9 +21,14 @@ export class StudentsListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loadStudents();
+  }
+
+  loadStudents() {
     this.adminService.getAllStudents()
-      .subscribe(result => {
-        this.studentList = result._embedded.students;
+      .subscribe((result) => {
+        console.log(result);
+        this.studentList = result['_embedded'].students;
         console.log(this.studentList)
       }),
       (error) => {
@@ -36,8 +41,21 @@ export class StudentsListComponent implements OnInit {
       width: '60%'
     });
     studentDialog.afterClosed().subscribe(result => {
-      this.newStudent = result;
+      console.log(result);
+      this.loadStudents();
     });
+  }
+
+  deleteStudent(student: Student) {
+    console.log(student.id);
+
+    this.adminService.deleteStudent(student.id)
+      .subscribe((data) => {
+        
+      },
+      (error) => console.log(error));
+
+    this.loadStudents();
   }
 
 }

@@ -18,9 +18,11 @@ export class StudentDialogComponent implements OnInit {
   }
 
   submit(username: any, firstName: any, lastName: any) {
+
+    console.log(firstName)
     
     let newStudent: Student =  {
-      student_id: 0,
+      id: 5,
       first_name: firstName,
       last_name: lastName,
       username: username,

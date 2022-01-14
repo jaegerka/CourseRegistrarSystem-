@@ -1,14 +1,14 @@
 CREATE TABLE student (
-	id INT NOT NULL,
+	student_id INT NOT NULL,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	username VARCHAR(50) NOT NULL
 );
 
-INSERT INTO student (id, first_name, last_name, username) VALUES (0, 'Kaleigh', 'Jaeger', 'student01');
-INSERT INTO student (id, first_name, last_name, username) VALUES (1, 'Danny', 'Trevino', 'student02');
-INSERT INTO student (id, first_name, last_name, username) VALUES (2, 'Molly', 'Andrews', 'student03');
-INSERT INTO student (id, first_name, last_name, username) VALUES (3, 'Matthew', 'Allen', 'student04');
+INSERT INTO student (student_id, first_name, last_name, username) VALUES (100, 'Kaleigh', 'Jaeger', 'student01');
+INSERT INTO student (student_id, first_name, last_name, username) VALUES (101, 'Danny', 'Trevino', 'student02');
+INSERT INTO student (student_id, first_name, last_name, username) VALUES (102, 'Molly', 'Andrews', 'student03');
+INSERT INTO student (student_id, first_name, last_name, username) VALUES (103, 'Matthew', 'Allen', 'student04');
 
 
 

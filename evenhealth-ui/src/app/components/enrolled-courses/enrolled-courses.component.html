@@ -1,1 +1,34 @@
-<p>enrolled-courses works!</p>
+<div class="header">
+    <h1>Enrolled Courses</h1>
+    <p>Here is a list of the courses in which you are enrolled</p>
+</div>
+
+<div>
+    <table mat-table  class="mat-elevation-z8">
+      
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let course"> {{course.description}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="professor">
+          <th mat-header-cell *matHeaderCellDef> Professor </th>
+          <td mat-cell *matCellDef="let course"> {{course.professor}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="capacity">
+          <th mat-header-cell *matHeaderCellDef> Capacity </th>
+          <td mat-cell *matCellDef="let course"> {{course.capacity}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let course"> 
+                <button *ngIf="user == 'Student'" mat-raised-button color="warn">UnEnroll</button>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>

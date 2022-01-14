@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfessorServiceService } from 'src/app/service/professor/professor-service.service';
 
 @Component({
   selector: 'app-professor-courses',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfessorCoursesComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns: string[] = ['description', 'capacity'];
+
+  constructor(
+    private professorService: ProfessorServiceService
+  ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  getCoursesByProfessor(id: any) {
+    this.professorService.getAllCoursesByProfessor(10)
   }
 
 }

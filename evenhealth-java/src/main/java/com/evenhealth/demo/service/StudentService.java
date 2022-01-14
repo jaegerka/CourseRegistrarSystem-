@@ -12,9 +12,13 @@ public class StudentService {
 	@Autowired
 	private StudentRepository sr;
 	
-	public student createNewStudent(student newStudent) {
+	public void createNewStudent(student newStudent) {
 		System.out.println("Student Service Hit");
-		return sr.save(newStudent);
+		sr.save(newStudent);
+	}
+
+	public void deleteStudent(int id) {
+		sr.deleteById(id);
 	}
 
 }
