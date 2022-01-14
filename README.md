@@ -49,11 +49,14 @@ To delete a user as an admin:
 *Tests are written in the files within the folder (ex. CourseServiceTest.java)
 
 **Thing I would've liked to have implemented**
+- Adding and pulling in data for Professor table
+- Adding and pulling in data for Student enrolled courses table
+- Functionality for enroll, unenroll, delete course, edit course, and edit student buttons
 - Security
 - Validation for user login 
 - A two-factor authentication system for logging in/registering as a new user
 - Validation for creating a new user & creating a new course 
-- More thorough tests
 - A check on the backend to tell whether a user was an admin, professor, or student 
+- A lot more testing with Mockito and JUnit
 - A lot more features, these are just a few that came to mind.
       
