@@ -15,8 +15,11 @@ export class CoreserviceService {
     return this.http.get<any[]>(`http://localhost:8080/courses`)
   }
 
-  login(email: any, password: any) {
-    return this.http.post<String>('http://localhost:8080/login', email, password)
+  login(username: any, password: any) {
+    return this.http.post<any>('http://localhost:8080/login', {
+      username,
+      password
+    })
   }
 
 }

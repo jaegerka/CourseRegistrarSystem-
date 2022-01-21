@@ -1,5 +1,6 @@
 package com.evenhealth.demo.service;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,10 @@ public class StudentService {
 	
 	@Autowired
 	private StudentRepository sr;
+
+	public List<student> getAllStudents() {
+		return sr.findAll();
+	}
 	
 	public void createNewStudent(student newStudent) {
 		System.out.println("Student Service Hit");

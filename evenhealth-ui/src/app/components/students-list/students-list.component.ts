@@ -12,7 +12,7 @@ import { StudentDialogComponent } from './student-dialog/student-dialog.componen
 export class StudentsListComponent implements OnInit {
 
   studentList = [];
-  displayedColumns: string[] = ['firstName', 'lastName', 'userName', 'actions'];
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'userName', 'actions'];
   newStudent: Student;
 
   constructor(
@@ -28,7 +28,7 @@ export class StudentsListComponent implements OnInit {
     this.adminService.getAllStudents()
       .subscribe((result) => {
         console.log(result);
-        this.studentList = result['_embedded'].students;
+        this.studentList = result;
         console.log(this.studentList)
       }),
       (error) => {
