@@ -21,7 +21,7 @@ export class CourseListComponent implements OnInit {
   ngOnInit(): void {
     this.coreService.getAllCourses()
       .subscribe(result => {
-        this.courseList = result['_embedded'].courses;
+        this.courseList = result;
         console.log(this.courseList);
       })
 
